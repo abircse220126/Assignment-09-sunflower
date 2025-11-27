@@ -9,6 +9,7 @@ import Home from './Component/Home/Home.jsx';
 import Register from './Component/Authentication/Register/Register.jsx';
 import AuthProvider from './Context/AuthProvider/AuthProvider.jsx';
 import Login from './Component/Authentication/Login/Login.jsx';
+import MyProfile from './Component/MyProfile/MyProfile.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path:"/",
         Component:Home
+      },
+      {
+        path:"/my-profile",
+        Component:MyProfile
       },
       {
         path:"/register",
