@@ -3,10 +3,25 @@ import { NavLink } from "react-router";
 import { AuthContext } from "../../Context/AuthContext/AuthContext";
 
 const Navbar = () => {
-  const { user } = use(AuthContext);
+  const { user , signOutUser } = use(AuthContext);
   console.log(user?.displayName);
   console.log(user?.photoURL);
-  const fixedURL = user?.photoURL?.replace("s96-c", "s256-c");
+
+
+  const handleLogOut = ()=>{
+    console.log("log out button is clicked")
+
+    signOutUser()
+    .then(()=>{
+
+    })
+    .catch(error =>{
+      console.log(error)
+    })
+
+
+
+  }
 
   const link = (
     <>
@@ -59,7 +74,10 @@ const Navbar = () => {
           </div>
           <div className="pl-3">
           {
-            user?<button className="btn btn-primary">Logout</button> :<button className="btn btn-primary">SignUp</button>
+            user?
+            <NavLink to="/login"><button onClick={handleLogOut}
+             className="btn btn-primary">Logout</button></NavLink>
+             :<button className="btn btn-primary">SignUp</button>
           }
           </div>
 
