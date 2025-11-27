@@ -1,12 +1,13 @@
 import React, { use, useState } from "react";
 import { AuthContext } from "../../../Context/AuthContext/AuthContext";
 import { NavLink, useNavigate } from "react-router";
+import { FaEye, FaRegEyeSlash } from "react-icons/fa";
 
 const Login = () => {
-  const { signInUser , googleSignIn } = use(AuthContext);
+  const { signInUser, googleSignIn } = use(AuthContext);
   const [error, setError] = useState("");
+  const [showpassword , setShowpassord]=useState(false)
   const navigate = useNavigate();
-
 
   // login with email and password
   const handleLogin = (event) => {
@@ -24,18 +25,24 @@ const Login = () => {
       });
   };
 
-// Login with Google
-  const handleGoogleLogin = ()=>{
-    console.log("handle login button is clicked")
+  // Login with Google
+  const handleGoogleLogin = (event) => {
+    event.preventDefault()
+    console.log("handle login button is clicked");
     googleSignIn()
-    .then(result =>{
-      console.log(result.user)
-      navigate("/")
-    })
-    .catch(error =>{
-      console.log(error.message)
-    }
-    )
+      .then((result) => {
+        console.log(result.user);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
+  // Show password
+  const handleShowPassword=(event)=>{
+    event.preventDefault()
+    setShowpassord(!showpassword)
   }
 
   return (
@@ -56,19 +63,30 @@ const Login = () => {
                   placeholder="Email"
                 />
                 <label className="label">Password</label>
-                <input
-                  type="password"
-                  name="password"
-                  className="input"
-                  placeholder="Password"
-                />
+                <div className="relative">
+                  <input 
+                    type={showpassword? "text":"password"}
+                    name="password"
+                    className="input"
+                    placeholder="Password"
+                  />
+                  <button onClick={handleShowPassword}
+                  className="absolute top-4 right-5">
+                   {showpassword? <FaRegEyeSlash /> : <FaEye />
+
+}
+                  </button>
+                </div>
+
                 <div>
                   <a className="link link-hover">Forgot password?</a>
                 </div>
                 {error && <h1 className="text-red-400">{error}</h1>}
                 <button className="btn btn-neutral mt-4">Login</button>
-                <button onClick={handleGoogleLogin}
-                 className="btn bg-white text-black border-[#e5e5e5]">
+                <button
+                  onClick={handleGoogleLogin}
+                  className="btn bg-white text-black border-[#e5e5e5]"
+                >
                   <svg
                     aria-label="Google logo"
                     width="16"
