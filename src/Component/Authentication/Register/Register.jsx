@@ -69,8 +69,7 @@ const Register = () => {
     googleSignIn()
       .then((result) => {
         console.log(result.user);
-        navigate("/")
-
+        navigate("/");
       })
       .catch((error) => {
         console.log(error.message);
@@ -137,14 +136,7 @@ const Register = () => {
                     {showPassword ? <FaEyeSlash /> : <FaEye />}
                   </button>
                 </div>
-                <div>
-                  <a className="link link-hover">
-                    Already have an account? please{" "}
-                    <NavLink to="/login" className="link-hover text-purple-500">
-                      Login
-                    </NavLink>
-                  </a>
-                </div>
+
                 {error && <h3 className="text-red-500">{error}</h3>}
                 <button className="btn btn-neutral mt-4">Register</button>
               </fieldset>
@@ -183,6 +175,14 @@ const Register = () => {
               </svg>
               Login with Google
             </button>
+            <div>
+              <a className="link link-hover">
+                Already have an account? please{" "}
+                <NavLink to="/login" className="link-hover text-purple-500">
+                  Login
+                </NavLink>
+              </a>
+            </div>
           </div>
         </div>
       </div>

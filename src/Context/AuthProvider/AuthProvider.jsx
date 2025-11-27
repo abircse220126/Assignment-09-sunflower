@@ -4,14 +4,13 @@ import {
   createUserWithEmailAndPassword,
   GoogleAuthProvider,
   onAuthStateChanged,
+  signInWithEmailAndPassword,
   signInWithPopup,
 } from "firebase/auth";
 import { auth } from "../../Firebase/Firebase.init";
 
 
 const googleProvider=new GoogleAuthProvider()
-
-
 
 const AuthProvider = ({ children }) => {
   const [user, Setuser] = useState(null);
@@ -22,8 +21,15 @@ const AuthProvider = ({ children }) => {
 
   const googleSignIn = () => {
     return signInWithPopup(auth , googleProvider)
-  } 
+  };
 
+
+  // that is used in login section
+  const signInUser=(email , password)=>{
+    return signInWithEmailAndPassword(auth , email , password)
+  }
+
+  // create observer 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentuser) => {
       Setuser(currentuser);
@@ -33,10 +39,12 @@ const AuthProvider = ({ children }) => {
     };
   }, []);
 
+
   const info = {
     CreateUser,
     googleSignIn,
     user,
+    signInUser
   };
 
   return <AuthContext value={info}>{children}</AuthContext>;
