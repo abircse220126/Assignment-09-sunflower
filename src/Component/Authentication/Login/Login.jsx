@@ -119,7 +119,6 @@ const Login = () => {
               </fieldset>
 
               <div className="mt-3">
-                <a>
                   Create an new account{" "}
                   <NavLink
                     to="/register"
@@ -128,7 +127,6 @@ const Login = () => {
                     {" "}
                     Register{" "}
                   </NavLink>
-                </a>
               </div>
             </form>
           </div>
