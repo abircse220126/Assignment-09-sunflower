@@ -4,17 +4,14 @@ import { updateProfile } from "firebase/auth";
 import { NavLink, useNavigate } from "react-router";
 import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { GoogleAuthProvider } from "firebase/auth/web-extension";
-
-
-
-
 
 const Register = () => {
   const { CreateUser, googleSignIn } = use(AuthContext);
   const [error, setError] = useState(" ");
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
+
+  console.log(googleSignIn);
 
   // Register with email and password
   const handlRegister = (event) => {
@@ -66,22 +63,19 @@ const Register = () => {
       });
   };
 
-
   // login with google
 
   const handleGoogleRegister = () => {
-    console.log("google Sign in button is clicked")
     googleSignIn()
       .then((result) => {
         console.log(result.user);
+        navigate("/")
+
       })
       .catch((error) => {
         console.log(error.message);
       });
-
   };
-
-
 
   // show password
   const handleShowPassword = () => {
@@ -157,8 +151,9 @@ const Register = () => {
             </form>
 
             <button
-            onClick={handleGoogleRegister}
-             className="btn bg-white text-black border-[#e5e5e5]">
+              onClick={handleGoogleRegister}
+              className="btn bg-white text-black border-[#e5e5e5]"
+            >
               <svg
                 aria-label="Google logo"
                 width="16"
