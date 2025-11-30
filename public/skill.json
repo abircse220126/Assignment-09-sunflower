@@ -1,0 +1,75 @@
+[
+  {
+    "skillId": 1,
+    "skillName": "Beginner Guitar Lessons",
+    "providerName": "Alex Martin",
+    "providerEmail": "alex@skillswap.com",
+    "price": 20,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Acoustic guitar classes for complete beginners.",
+    "image": "https://images.equipboard.com/uploads/article/image/160/l_how-much-do-guitar-lessons-cost.jpg",
+    "category": "Music"
+  },
+  {
+    "skillId": 2,
+    "skillName": "Spoken English Practice",
+    "providerName": "Sara Hossain",
+    "providerEmail": "sara@skillswap.com",
+    "price": 10,
+    "rating": 4.6,
+    "slotsAvailable": 5,
+    "description": "Conversational English sessions for non-native speakers.",
+    "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhfDI0fHx0ZWFjaGluZ3xlbnwwfHx8fDE2OTEzMDY4MzY&ixlib=rb-4.0.3&q=80&w=400",
+    "category": "Language"
+  },
+  {
+    "skillId": 3,
+    "skillName": "JavaScript Fundamentals",
+    "providerName": "David Kim",
+    "providerEmail": "david@skillswap.com",
+    "price": 25,
+    "rating": 4.7,
+    "slotsAvailable": 4,
+    "description": "Learn the basics of JavaScript programming from scratch.",
+    "image": "https://images.unsplash.com/photo-1511376777868-611b54f68947?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhfDEwfHxndWl0YXJ8ZW58MHx8fHwxNjkxMzA2NzU5&ixlib=rb-4.0.3&q=80&w=400",
+
+    "category": "Coding"
+  },
+  {
+    "skillId": 4,
+    "skillName": "Yoga for Beginners",
+    "providerName": "Anika Rahman",
+    "providerEmail": "anika@skillswap.com",
+    "price": 15,
+    "rating": 4.9,
+    "slotsAvailable": 6,
+    "description": "Gentle yoga sessions to improve flexibility and reduce stress.",
+    "image": "https://manage.ayurbethaniya.org/uploads/media/asanas-banner-image66a7733537998.webp",
+    "category": "Wellness"
+  },
+  {
+    "skillId": 5,
+    "skillName": "Intermediate Guitar Lessons",
+    "providerName": "Alex Martin",
+    "providerEmail": "alex@skillswap.com",
+    "price": 30,
+    "rating": 4.8,
+    "slotsAvailable": 2,
+    "description": "Enhance your guitar skills with advanced techniques and songs.",
+    "image": "https://www-ecs.jamplay.com/client/global/images/shell/guitar-lessons/genres/guy-jamming-acoustic.jpg",
+    "category": "Music"
+  },
+  {
+    "skillId": 6,
+    "skillName": "Advanced English Conversation",
+    "providerName": "Sara Hossain",
+    "providerEmail": "sara@skillswap.com",
+    "price": 15,
+    "rating": 4.7,
+    "slotsAvailable": 3,
+    "description": "Practice fluency and advanced English conversation skills.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUBTxvncIBTNay04PL7dRX5lTlcMvvHwQgw92J6DKi4DcLevXe6pDcXWZmuYwpcY1q5W8&usqp=CAU",
+    "category": "Language"
+  }
+]
