@@ -1,4 +1,4 @@
-import React from "react";
+import React, { use } from "react";
 import { AuthContext } from "../../Context/AuthContext/AuthContext";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -43,8 +43,8 @@ const bannerImages = [
 const skillPromiss = fetch("/skill.json").then((res) => res.json());
 
 const Home = () => {
-  // const {user}=use(AuthContext)
-  // console.log(user)
+  const {user}= use(AuthContext)
+  console.log(user)
 
   return (
     <>

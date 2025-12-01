@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 
 const SkillCard = ({ skill }) => {
-  console.log(skill);
+  // console.log(skill);
 
   return (
     <div className="bg-white shadow-lg rounded-lg overflow-hidden w-72 hover:shadow-xl transition-shadow duration-300">

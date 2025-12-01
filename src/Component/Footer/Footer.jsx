@@ -40,7 +40,7 @@ const Footer = () => {
                 📍 <span>123 Knowledge Road, Dhaka, Bangladesh</span>
               </li>
               <li className="flex gap-3">
-                📞 <a href="tel:+8801712345678" className="hover:underline">+880 1712 345 678</a>
+                📞 <a href="tel:+8801712345678" className="hover:underline">+880 1708 954 352</a>
               </li>
               <li className="flex gap-3">
                 ✉️ <a href="mailto:info@brightpath.com" className="hover:underline">info@brightpath.com</a>
