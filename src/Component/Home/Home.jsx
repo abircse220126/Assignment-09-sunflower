@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React from 'react';
 import { AuthContext } from '../../Context/AuthContext/AuthContext';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -22,6 +22,7 @@ import photo12 from "../../assets/yoga1.avif"
 import photo13 from "../../assets/yoga2.jpg"
 import SkillCard from '../SkillCard/SkillCard';
 import AllSkill from '../AllSkill/AllSkill';
+import ExtraSections from '../ExtraSection/ExtraSection';
 
 const bannerImages=[photo1, photo2,photo3 ,photo4 , photo5 ,photo6 ,photo7 ,photo8,photo9,photo10,photo11,photo12,photo13]
 
@@ -64,6 +65,9 @@ const Home = () => {
 
         <div className=''> 
             <AllSkill skillPromiss={skillPromiss}></AllSkill>
+        </div>
+        <div>
+          <ExtraSections></ExtraSections>
         </div>
 
 
