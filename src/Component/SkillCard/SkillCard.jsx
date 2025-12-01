@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const SkillCard = ({ skill }) => {
   console.log(skill);
@@ -23,7 +24,7 @@ const SkillCard = ({ skill }) => {
 
         {/* View Details Button */}
         <button className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition">
-          View Details
+          <Link to="/view-details">View Details</Link>
         </button>
       </div>
     </div>

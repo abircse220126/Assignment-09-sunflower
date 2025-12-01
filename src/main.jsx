@@ -10,6 +10,7 @@ import Register from './Component/Authentication/Register/Register.jsx';
 import AuthProvider from './Context/AuthProvider/AuthProvider.jsx';
 import Login from './Component/Authentication/Login/Login.jsx';
 import MyProfile from './Component/MyProfile/MyProfile.jsx';
+import ViewDetails from './Component/ViewDetails/ViewDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,12 @@ const router = createBrowserRouter([
       {
         path:"/login",
         Component:Login
+      },
+      {
+        path:"/view-details",
+        Component:ViewDetails
       }
+
     ]
   },
 ]);

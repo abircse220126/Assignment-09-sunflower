@@ -18,10 +18,16 @@ const Footer = () => {
 
             {/* Social icons */}
             <div className="flex gap-3 mt-4">
-              <a href="#" className="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">F</a>
-              <a href="#" className="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">T</a>
-              <a href="#" className="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">I</a>
-              <a href="#" className="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">L</a>
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/2048px-Facebook_f_logo_%282021%29.svg.png" 
+              className='w-10 h-10 rounded-2xl object-cover'
+              alt="" />
+              <img src="https://img.freepik.com/premium-vector/instagram-vector-logo-icon-social-media-logotype_901408-392.jpg?semt=ais_hybrid&w=740&q=80" 
+              className='w-10 h-10 rounded-2xl object-cover'
+              alt="" />
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRHqvUv15Yv-jy95oOHmX9eCXRlfjW8jZIag&s" 
+              className='w-10 h-10 rounded-2xl object-cover'
+              alt="" />
+             
             </div>
           </div>
 
