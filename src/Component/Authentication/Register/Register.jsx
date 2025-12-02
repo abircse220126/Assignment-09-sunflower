@@ -83,7 +83,7 @@ const Register = () => {
     console.log(showPassword);
   };
   return (
-    <div className="hero bg-base-200 pt-5">
+    <div className="hero bg-base-200 pt-5 min-h-screen">
       <div>
         <div className="text-center">
           <h1 className="text-5xl font-bold">Register Now </h1>

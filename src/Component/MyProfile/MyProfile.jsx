@@ -1,6 +1,6 @@
 import React, { use, useState } from "react";
 import { AuthContext } from "../../Context/AuthContext/AuthContext";
-import { toast } from "react-toastify";
+import {} from "react-toastify";
 import { updateProfile } from "firebase/auth";
 
 const MyProfile = () => {
@@ -42,7 +42,7 @@ const MyProfile = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-r from-purple-500 to-pink-500 flex justify-center items-center p-4">
+      <div className="h-100 bg-gradient-to-r from-purple-500 to-pink-500 flex justify-center items-center p-4">
         <div className="bg-white rounded-xl shadow-2xl flex flex-col md:flex-row items-center p-8 gap-8 max-w-2xl">
           <img
             src={user?.photoURL}
@@ -70,7 +70,7 @@ const MyProfile = () => {
         {update && (
           <div className="hero bg-base-200">
             <div className="hero-content flex-col">
-              <div className="text-center lg:text-left">
+              <div className=" flex justify-center items-center text-center lg:text-left ">
                 <h1 className="text-5xl font-bold">Update Profile</h1>
               </div>
               <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
@@ -81,6 +81,7 @@ const MyProfile = () => {
                       <input
                         type="text"
                         name="name"
+                        required
                         className="input"
                         placeholder="Name"
                       />
@@ -88,6 +89,7 @@ const MyProfile = () => {
                       <label className="label">Image Url</label>
                       <input
                         type="text"
+                        required
                         className="input"
                         name="url"
                         placeholder="https://imgbb.com/"

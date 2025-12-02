@@ -36,6 +36,15 @@ const Navbar = () => {
           My Profile
         </NavLink>
       </li>
+
+      <li>
+        <NavLink 
+          to="/top-categories" 
+          className="text-gray-700 hover:text-blue-600 font-medium transition-all duration-200"
+        >
+          Top Categories
+        </NavLink>
+      </li>
     </>
   );
 

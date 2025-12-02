@@ -1,6 +1,6 @@
 import React, { use, useState } from "react";
 import { AuthContext } from "../../../Context/AuthContext/AuthContext";
-import { NavLink, useNavigate } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 import { FaEye, FaRegEyeSlash } from "react-icons/fa";
 
 const Login = () => {
@@ -21,6 +21,7 @@ const Login = () => {
         navigate("/");
       })
       .catch((error) => {
+        console.log(error.message)
         setError("Email or Password is invalid");
       });
   };
@@ -46,7 +47,7 @@ const Login = () => {
   }
 
   return (
-    <div className="hero bg-base-200 pt-5">
+    <div className="hero bg-base-200 pt-5  min-h-screen">
       <div>
         <div className="text-center lg:text-left">
           <h1 className="text-5xl font-bold">Login now!</h1>
@@ -79,7 +80,7 @@ const Login = () => {
                 </div>
 
                 <div>
-                  <a className="link link-hover">Forgot password?</a>
+                  <Link to="/forget-password" className="link link-hover">Forget Password?</Link>
                 </div>
                 {error && <h1 className="text-red-400">{error}</h1>}
                 <button className="btn btn-neutral mt-4">Login</button>
