@@ -2,6 +2,7 @@
 import React, { use } from "react";
 import { NavLink } from "react-router";
 import { AuthContext } from "../../Context/AuthContext/AuthContext";
+import logo from "../../assets/logo (3).png"
 
 const Navbar = () => {
   const { user , signOutUser } = use(AuthContext);
@@ -84,7 +85,8 @@ const Navbar = () => {
           </div>
 
           <a className="text-2xl font-bold tracking-tight text-blue-600 ">
-            daisyUI
+            <img src={logo} className="h-20 w-20" 
+            alt="" />
           </a>
         </div>
 
